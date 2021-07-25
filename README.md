@@ -1,3 +1,5 @@
+![Image of Pong](https://raw.githubusercontent.com/kurtjd/pong/master/screenshot.png)
+
 Pong
 ====
 This was my first attempt at graphical game programming, and I didn't realize how large this would balloon to when I started, so I didn't bother to split it into multiple files.
