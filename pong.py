@@ -1,18 +1,18 @@
 #------------------------------------------------------------------------------
-# Name:        Pong
-# Version:     v1
+# Name:           Pong
+# Version:        v1
 #
-# Author:      Kurtis Dinelle
+# Author:         Kurtis Dinelle
 #
-# Created:     20/05/2013
-# Copyright:   (c) Dinelle 2013
-# License:     GPL
+# Created:        20/05/2013
+# Last Updated:   24/07/2021
+# Copyright:      (c) Dinelle 2013
+# License:        MIT
 #------------------------------------------------------------------------------
 
 import pygame
 import sys
 import os
-import random
 import pygame.locals as pygamevars
 
 # Colors
@@ -101,7 +101,7 @@ class TextBox:
 
     def set_value(self, text_value):
         """Set's the textbox's value, then displays it back on the screen."""
-        text = self.font.render(text_value, 1, self.color)
+        text = self.font.render(text_value, True, self.color)
         self.text_rect = text.get_rect(center=self.position)
         screen.blit(text, self.text_rect)
 
@@ -484,7 +484,7 @@ def set_icon(icon_file):
     try:
         pygame.display.set_icon(pygame.image.load(icon_file))
     except:
-        print 'Icon could not be loaded!'
+        print('Icon could not be loaded!')
 
 
 def load_sound(soundfile):
@@ -493,7 +493,7 @@ def load_sound(soundfile):
     try:
         sound = pygame.mixer.Sound(fullpath)
     except:
-        print 'Sound file could not be loaded!'
+        print('Sound file could not be loaded!')
         # Make a dummy class so we don't need to do future error checking
         class NoSound:
             def play(self):
@@ -510,7 +510,7 @@ def play_music(musicfile):
     try:
         pygame.mixer.music.load(fullpath)
     except:
-        print 'Can not load music!'
+        print('Can not load music!')
         return
     pygame.mixer.music.set_volume(0.1)
     pygame.mixer.music.play(-1)
@@ -563,7 +563,7 @@ def draw_barriers():
 
 def draw_net():
     """Draws the tennis net down the center of the screen."""
-    for y in xrange(NET_POS['y'], COURT_BOTTOM, NET_SQUARE_SIZE + NET_BUFFER):
+    for y in range(NET_POS['y'], COURT_BOTTOM, NET_SQUARE_SIZE + NET_BUFFER):
         netsquare = (pygame.Rect(NET_POS['x'], y,
                      NET_SQUARE_SIZE, NET_SQUARE_SIZE))
         screen.fill(WHITE, netsquare)
