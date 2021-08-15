@@ -891,7 +891,7 @@ def handle_input():
 
 # Initialize display and FPS clock
 screen = create_window(SCREEN_WIDTH, SCREEN_HEIGHT,
-                       WINDOW_TITLE, 'plink_icon.png')
+                       WINDOW_TITLE, 'pong_icon.png')
 fps_clock = pygame.time.Clock()
 fps_counter = FPSCounter(FPSCOUNT_POS['x'], FPSCOUNT_POS['y'])
 
