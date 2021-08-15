@@ -1,5 +1,5 @@
 #------------------------------------------------------------------------------
-# Name:           Pong
+# Name:           Plink
 # Version:        v1
 #
 # Author:         Kurtis Dinelle
@@ -23,7 +23,7 @@ BLACK = (0, 0, 0)
 # Display constants
 SCREEN_WIDTH = 900
 SCREEN_HEIGHT = 600
-WINDOW_TITLE = 'Pong'
+WINDOW_TITLE = 'Plink'
 BG_COLOR = BLACK
 FPSCOUNT_POS = {'x': 30, 'y': 23}
 PADDLE_WIDTH = 20
@@ -891,7 +891,7 @@ def handle_input():
 
 # Initialize display and FPS clock
 screen = create_window(SCREEN_WIDTH, SCREEN_HEIGHT,
-                       WINDOW_TITLE, 'pong_icon.png')
+                       WINDOW_TITLE, 'plink_icon.png')
 fps_clock = pygame.time.Clock()
 fps_counter = FPSCounter(FPSCOUNT_POS['x'], FPSCOUNT_POS['y'])
 
