@@ -16,7 +16,7 @@ Installation
 
 Run
 ===
-```python plink.py```
+```python3 plink.py```
 
 Credits
 =======
